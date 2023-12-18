@@ -14,13 +14,13 @@ public class Main {
         Masina masina2 = new Masina();
         masina2.marca = "Dacia";
         //suprascriere doar pentru obiect
-        System.out.println((masina1.marca));
-        System.out.println((masina2.marca));
+        System.out.println(( masina1.marca ));
+        System.out.println(( masina2.marca ));
         Masina masina3 = new Masina();
         Masina masina4 = new Masina();
         masina3.anFabricatie = 2005;
         masina4.anFabricatie = 2010;
-        System.out.println((masina3.anFabricatie));
+        System.out.println(( masina3.anFabricatie ));
 
         Persoana persoana1 = new Persoana();
         System.out.println(persoana1.nume);
@@ -41,33 +41,46 @@ public class Main {
         Animal animal3 = new Animal("Pisi", "gri");
         Animal animal4 = new Animal("Nemo", "rosu", false);
 
-        Elev elev1=new Elev("Popescu");
-        Elev elev2=new Elev("Ionescu");
+        Elev elev1 = new Elev("Popescu");
+        Elev elev2 = new Elev("Ionescu");
         System.out.println(elev1.nume);
-        elev1.diriginte="Isoscel2";
+        elev1.diriginte = "Isoscel2";
         System.out.println(elev2.diriginte);
 
         elev1.metodanonstatica();
         Elev.metodastatica();
 
-        Film film1=new Film();
+        Film film1 = new Film();
         film1.setTitlu("Titanic");
         System.out.println(film1.getTitlu());
 
-        Inotator inotator1=new Inotator();
+        Inotator inotator1 = new Inotator("Romania", "100m");
         inotator1.seAntreneaza();
         inotator1.seOdihneste();
+        //System.out.println(inotator1.tara);
         //aicinuamsuprascrisclasaparinte
 
-        Maratonist maratonist1=new Maratonist();
+        Maratonist maratonist1 = new Maratonist("Congo", "500m");
         maratonist1.seAntreneaza();
         maratonist1.seOdihneste();
         //aiciamsuprascrisclasaparinte
 
-        Mamifer Pisica=new Mamifer();
-        Pisica.scoateSunete();
-        Mamifer Caine=new Mamifer();
-        Caine.scoateSunete();
+        Pisica pisi = new Pisica();
+        pisi.scoateSunete();
+        Caine cutu = new Caine();
+        cutu.scoateSunete();
+
+        //Mamifer Pisica=new Mamifer();
+        //Pisica.scoateSunete();
+        //Mamifer Caine=new Mamifer();
+
+        Mamifer mamifer1 = new Pisica();//pisi1=Pisica
+        mamifer1.scoateSunete();//mergeautomat
+
+        Pisica pisi1 = new Pisica();
+        Mamifer pisi2 = pisi1;
+        //  Mamifer pisi3=new Mamifer();//pisi3edetipmamamifer
+        //Pisica pisi4=(Pisica) pisi3;//pisi4ilfacemdetippisica
 
 
     }
