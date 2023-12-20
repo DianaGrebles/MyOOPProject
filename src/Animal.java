@@ -33,7 +33,7 @@ public class Animal {
 
     }
 
-    public String afiseaza() {
+    public String afiseazaculoarea() {
         return nume + "are culoarea" + culoare;
     }
 
